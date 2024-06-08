@@ -4,7 +4,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 
-model_name = "result_"
+model_name = "result"
 tokenizer = AutoTokenizer.from_pretrained("gpt2-xl", pad_token="</s>")
 model = AutoModelForCausalLM.from_pretrained(model_name).half().cuda()
 
